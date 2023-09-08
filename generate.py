@@ -97,10 +97,11 @@ def main(
             ``"llm.int8"``: LLM.int8() mode,
             ``"gptq.int4"``: GPTQ 4-bit mode.
     """
+
     if not checkpoint_path:
-        checkpoint_path = Path(f"../checkpoints/lit-llama/7B/lit-llama.pth")
+        checkpoint_path = Path(f"./checkpoints/lit-llama/7B/lit-llama.pth")
     if not tokenizer_path:
-        tokenizer_path = Path("../checkpoints/lit-llama/tokenizer.model")
+        tokenizer_path = Path("./checkpoints/lit-llama/tokenizer.model")
     assert checkpoint_path.is_file(), checkpoint_path
     assert tokenizer_path.is_file(), tokenizer_path
 
